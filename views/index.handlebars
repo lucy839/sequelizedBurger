@@ -1,0 +1,45 @@
+<div class="container app">
+  <div class="row">
+    {{!-- Uneaten Burger --}}
+    <div class="col-md-6">
+      <ol>
+        {{#each burgers}}
+        {{#unless this.devoured}}
+        <form action="burger/eat/{{id}}" method="POST">
+          <div class="input-group">
+             <li>{{this.burger_name}}
+          <button type="submit" class='uneaten'><i class="fas fa-utensils"></i> </button>
+        </li>
+          </div>
+        </form>
+        {{/unless}}
+        {{/each}}
+    </div>
+
+    {{!-- Eaten Burger --}}
+    <div class="col-md-6">
+      <ol class='burgerEaten'>
+        {{#each burgers}}
+        {{#if this.devoured}}
+        <li>{{this.burger_name}}</li>
+        {{/if}}
+        {{/each}}
+      </ol>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container app">
+  {{!-- Add New Burger --}}
+  <div class="row">
+    <div class="col-md-12">
+        <h2>Enter a burger you want to eat and submit!</h2>
+      <form action="/burgers" method="POST">
+        <input type="text" id="name" name="burger_name" placeholder="World's best burger">
+        <button type="submit" class="add">Submit <i class="fas fa-clipboard-list"></i></button>
+      </form>
+    </div>
+  </div>
+</div>
