@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS newBurgers_db;
+CREATE DATABASE newBurgers_db;
