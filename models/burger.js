@@ -1,7 +1,9 @@
 module.exports = function (sequelize, DataTypes) {
   var Burger = sequelize.define("Burger", {
     burger_name: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull: false,
+      len:[1]
     },
     devoured: {
       type: DataTypes.BOOLEAN,
@@ -9,11 +11,9 @@ module.exports = function (sequelize, DataTypes) {
     }
   });
 
+  // link burger to customer...burger "belongs to" customer
   Burger.associate = function(models) {
     Burger.belongsTo(models.Customer, {
-      // foreignKey: {
-      //   allowNull: false
-      // }
     });
   };
   return Burger;
