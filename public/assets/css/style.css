@@ -11,6 +11,9 @@ h1, h2 {
 .row{
     width:80%;
 }
+form {
+    display: inline;
+}
 
 /* jumbotron */
 .jumbotron{
@@ -33,7 +36,7 @@ h1{
 li{
     font-size:20px;
 }
-.uneaten{
+.eat, .delete{
     border-style: none;
     border-radius:50%;
 }
@@ -46,7 +49,7 @@ li{
     border-radius:16px;
     transition-duration: 0.2s;
 }
-.add:hover, .uneaten:hover{
+.add:hover, .eat:hover, .delete:hover{
     background: rgba(255, 0, 0, 0.564);
 }
 
