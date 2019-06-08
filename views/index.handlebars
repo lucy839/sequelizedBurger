@@ -5,21 +5,24 @@
       <ol>
         {{#each burgers}}
         {{#unless this.devoured}}
-        {{!-- <form action="burger/eat/{{id}}" method="POST"> --}}
-          <div class="input-group">
-            <li><b>{{this.burger_name}}</b>
-                 <form action="burger/eat/{{id}}" method="POST">
+        <div class="input-group">
+          <li><b>{{this.burger_name}}</b>
+
+            {{!-- eat burger --}}
+            <form action="burger/eat/{{id}}" method="POST">
               <div class="form-group">
                 <label for="customer">Who is eating this burger?</label>
                 <input type="text" name="customer" placeholder="Customer">
               </div>
-              <button type="submit" class="eat"><i class="fas fa-utensils"></i> </button></form>
-              <form action="burger/delete/{{this.id}}" method="POST">
-                <button type="submit" class="delete"><i class="fas fa-trash-alt"></i></button>
-              </form>
-            </li>
-          </div>
-        {{!-- </form> --}}
+              <button type="submit" class="eat"><i class="fas fa-utensils"></i> </button>
+            </form>
+
+            {{!-- delete order --}}
+            <form action="burger/delete/{{this.id}}" method="POST">
+              <button type="submit" class="delete"><i class="fas fa-trash-alt"></i></button>
+            </form>
+          </li>
+        </div>
         {{/unless}}
         {{/each}}
     </div>
