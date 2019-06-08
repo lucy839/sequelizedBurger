@@ -46,7 +46,7 @@ module.exports = function (app) {
 	});
 
 	// delete order
-	app.delete("/burger/delete/:id", function (req, res) {
+	app.post("/burger/delete/:id", function (req, res) {
 		db.Burger.destroy({
 			where: {
 				id: req.params.id
