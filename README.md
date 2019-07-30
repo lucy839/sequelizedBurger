@@ -9,6 +9,7 @@
 ## Demo
 - The demo of the burger eating application can be found:
    https://mysterious-dusk-25201.herokuapp.com/
+- ![Alt text](public/assets/images/demo.png?raw=true  "demo")
 
 ## Installation
 - To run the application locally, first clone this repository with the following command.

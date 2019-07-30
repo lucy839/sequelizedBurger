@@ -40,7 +40,7 @@ module.exports = function (app) {
 						},
 						include: [db.Customer]
 					});
-			}).then(function () {
+			}).then(function (res) {
 				res.redirect("/");
 			});
 	});
